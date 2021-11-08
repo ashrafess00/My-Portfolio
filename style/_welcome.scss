@@ -1,15 +1,14 @@
 section.welcome {
   position: relative;
   height: 100vh;
-  width: 100%;
+  // width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 5rem;
+  padding: 3rem 1rem;
   &::before {
     content: "";
-    background: url("../images/backgroundPhone.jpg"),
-      linear-gradient(rgba(0, 0, 0, 0.158), rgb(255, 0, 0));
+    background: url("../images/bgPhone.jpg");
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -23,29 +22,13 @@ section.welcome {
     font-size: 1.7rem;
     color: white;
     font-weight: 600;
+    text-align: center;
   }
   p {
     color: white;
     opacity: 0.5;
   }
-}
-.logo2 {
-  width: 80%;
-  // animation: logo 1s forwards ease-in-out;
-  // margin-top: 5rem;
-}
-path#a {
-  // animation: logo 2s forwards;
-  margin-top: 2rem;
-  border: solid red 1px;
-}
-
-@keyframes logo {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(10deg) scale(1.1);
-    margin-top: 2rem;
+  img {
+    margin-top: 8rem;
   }
 }

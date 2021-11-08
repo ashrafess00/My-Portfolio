@@ -1,4 +1,29 @@
-@media (min-width: 700px) {
+@media (min-width: 600px) {
+  // nav
+  header {
+    nav ul.menu.flex {
+      width: 60%;
+    }
+  }
+
+  // welcome
+  section.welcome {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  //portfolio
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    img {
+      height: 30vh;
+    }
+  }
+}
+
+@media (min-width: 900px) {
   .btn {
     padding: 0.5rem 1rem;
     background-color: transparent;
@@ -17,8 +42,13 @@
     display: none;
   }
 
+  header {
+    nav ul.menu.flex {
+      width: initial;
+    }
+  }
   nav {
-    width: 50%;
+    width: 35rem;
     height: auto;
   }
 
@@ -38,7 +68,6 @@
     background-color: initial;
     z-index: initial;
     padding: initial;
-
     & a {
       color: white;
     }
@@ -46,7 +75,6 @@
       margin-bottom: initial;
     }
     li:last-child {
-      // padding: 0.5rem 1.5rem;
       justify-self: center;
       & a {
         color: white;
@@ -60,25 +88,14 @@
 
   //   Welcome Section
   section.welcome {
-    height: 100vh;
-    justify-content: center;
-    flex-direction: initial;
-    flex-wrap: wrap;
-    padding-top: initial;
+    padding: 3rem;
     &::before {
       background: url("../images/bgPc.jpg");
-      // background-size: cover;
-      background-size: contain;
-      background-repeat: no-repeat;
+      background-size: cover;
     }
     h1 {
       font-size: 5rem;
-      color: white;
-      font-weight: 600;
-      width: auto;
-    }
-    p {
-      font-size: 2em;
+      margin-bottom: 2rem;
     }
   }
 
@@ -160,6 +177,37 @@
   @each $name, $margin in $skillsColors {
     .skillsIcon-#{$name} {
       margin-top: $margin;
+    }
+  }
+
+  // Contact Me
+  .contactForm {
+    width: 60%;
+    input[type="text"] {
+      display: inline-block;
+      width: 48%;
+    }
+    input[type="email"] {
+      display: inline-block;
+      width: 48%;
+      margin-left: 3%;
+    }
+  }
+
+  //footer
+  footer div:nth-child(2) {
+    display: flex;
+  }
+
+  .footerIcons {
+    width: 20%;
+    margin: 2rem auto;
+    a i {
+      font-size: 2rem;
+      color: white;
+      &:hover {
+        color: $red;
+      }
     }
   }
 }

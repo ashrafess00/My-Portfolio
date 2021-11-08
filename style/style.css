@@ -73,7 +73,7 @@ h2 {
 .btn {
   padding: 0.5rem 1rem;
   background-color: red;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   color: white;
 }
@@ -181,7 +181,7 @@ nav {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #2c3e50;
   z-index: 1000;
   padding: 1rem;
@@ -228,7 +228,6 @@ nav {
 section.welcome {
   position: relative;
   height: 100vh;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,13 +238,12 @@ section.welcome {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 5rem;
+  padding: 3rem 1rem;
 }
 
 section.welcome::before {
   content: "";
-  background: url("../images/backgroundPhone.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.158)), to(red));
-  background: url("../images/backgroundPhone.jpg"), linear-gradient(rgba(0, 0, 0, 0.158), red);
+  background: url("../images/bgPhone.jpg");
   background-size: cover;
   position: absolute;
   top: 0px;
@@ -260,6 +258,7 @@ section.welcome h1 {
   font-size: 1.7rem;
   color: white;
   font-weight: 600;
+  text-align: center;
 }
 
 section.welcome p {
@@ -267,37 +266,8 @@ section.welcome p {
   opacity: 0.5;
 }
 
-.logo2 {
-  width: 80%;
-}
-
-path#a {
-  margin-top: 2rem;
-  border: solid red 1px;
-}
-
-@-webkit-keyframes logo {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(10deg) scale(1.1);
-            transform: rotate(10deg) scale(1.1);
-    margin-top: 2rem;
-  }
-}
-
-@keyframes logo {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(10deg) scale(1.1);
-            transform: rotate(10deg) scale(1.1);
-    margin-top: 2rem;
-  }
+section.welcome img {
+  margin-top: 8rem;
 }
 
 span {
@@ -384,7 +354,7 @@ h2::after {
 
 .langsContainer {
   border: solid red 1px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: auto;
   padding: 1rem;
   width: 90%;
@@ -399,7 +369,7 @@ h2::after {
   border: solid red 1px;
   height: 0.9rem;
   width: 70%;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1rem;
   width: 100%;
@@ -568,7 +538,7 @@ h2::after {
 
 .contactForm input, .contactForm textarea {
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   margin-bottom: 1rem;
   width: 100%;
@@ -582,7 +552,59 @@ h2::after {
   margin: auto;
 }
 
-@media (min-width: 700px) {
+footer {
+  margin-top: 2rem;
+}
+
+.footerBorder {
+  height: 5px;
+  width: 100%;
+  background-color: red;
+  margin-bottom: 2rem;
+}
+
+.footerLogo {
+  width: 10rem;
+  margin: auto;
+  display: block;
+}
+
+.footerIcons {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.footerIcons a i {
+  font-size: 2rem;
+  color: white;
+}
+
+.footerIcons a i:hover {
+  color: red;
+}
+
+.copyright {
+  font-size: 0.6rem;
+}
+
+@media (min-width: 600px) {
+  header nav ul.menu.flex {
+    width: 60%;
+  }
+  section.welcome h1 {
+    font-size: 3rem;
+  }
+  .portfolioGrid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .portfolioGrid img {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 900px) {
   .btn {
     padding: 0.5rem 1rem;
     background-color: transparent;
@@ -600,8 +622,11 @@ h2::after {
   #humIcon {
     display: none;
   }
+  header nav ul.menu.flex {
+    width: initial;
+  }
   nav {
-    width: 50%;
+    width: 35rem;
     height: auto;
   }
   .menu {
@@ -648,31 +673,15 @@ h2::after {
     display: flex;
   }
   section.welcome {
-    height: 100vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: initial;
-    -webkit-box-direction: initial;
-        -ms-flex-direction: initial;
-            flex-direction: initial;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-top: initial;
+    padding: 3rem;
   }
   section.welcome::before {
     background: url("../images/bgPc.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
   }
   section.welcome h1 {
     font-size: 5rem;
-    color: white;
-    font-weight: 600;
-    width: auto;
-  }
-  section.welcome p {
-    font-size: 2em;
+    margin-bottom: 2rem;
   }
   .responsive.flex.cl.al-i {
     -webkit-box-orient: horizontal;
@@ -760,6 +769,34 @@ h2::after {
   }
   .skillsIcon-bootsrap {
     margin-top: 10rem;
+  }
+  .contactForm {
+    width: 60%;
+  }
+  .contactForm input[type="text"], .contactForm textarea[type="text"] {
+    display: inline-block;
+    width: 48%;
+  }
+  .contactForm input[type="email"], .contactForm textarea[type="email"] {
+    display: inline-block;
+    width: 48%;
+    margin-left: 3%;
+  }
+  footer div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footerIcons {
+    width: 20%;
+    margin: 2rem auto;
+  }
+  .footerIcons a i {
+    font-size: 2rem;
+    color: white;
+  }
+  .footerIcons a i:hover {
+    color: red;
   }
 }
 /*# sourceMappingURL=style.css.map */
