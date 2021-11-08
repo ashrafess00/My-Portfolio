@@ -1,0 +1,66 @@
+.langsContainer {
+  border: solid $red 1px;
+  border-radius: $radius;
+  margin: auto;
+  padding: 1rem;
+  width: 90%;
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.arabic {
+  position: relative;
+  border: solid red 1px;
+  height: 0.9rem;
+  width: 70%;
+  border-radius: $radius;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $red;
+    width: 0%;
+    height: 100%;
+    animation: var(--arabicAnim);
+  }
+}
+.english {
+  @extend .arabic;
+  &::before {
+    animation: var(--englishAnim);
+  }
+}
+.french {
+  @extend .arabic;
+  &::before {
+    animation: var(--frenchAnim);
+  }
+}
+
+@keyframes arabic {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes english {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes french {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
+}

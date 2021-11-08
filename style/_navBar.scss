@@ -1,0 +1,67 @@
+header {
+  // height: 10vh;
+  padding: 1rem;
+  position: relative;
+  background-color: $dark-blue;
+  box-shadow: 0 5px 11px 1px #ff000052;
+  width: 100%;
+  align-items: center;
+}
+
+// .humIcon {
+//   height: auto;
+// }
+nav {
+  height: auto;
+}
+
+.menu {
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  border: solid red 1px;
+  position: absolute;
+  margin-top: 11rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: $radius;
+  background-color: $dark-blue;
+  z-index: 1000;
+  padding: 1rem;
+  a {
+    color: white;
+    transition: 1s;
+    &:hover {
+      color: $red;
+    }
+  }
+  & li:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  & li:last-child {
+    padding: 0.5rem 1rem;
+    transition: 0.5s;
+
+    & a {
+      color: white;
+    }
+  }
+
+  &.display {
+    display: none;
+  }
+}
+
+#humIcon {
+  font-size: 2rem;
+  color: white;
+}
+
+.logo1 {
+  width: 8rem;
+  height: auto;
+  // margin-left: 50%;
+}

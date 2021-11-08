@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "D:\\web_development_course"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "My Portfolio"
+  }
+}

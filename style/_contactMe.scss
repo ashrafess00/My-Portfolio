@@ -1,0 +1,20 @@
+.contactForm {
+  width: 80%;
+  margin: auto;
+  input {
+    padding: 1rem;
+    border-radius: $radius;
+    border: none;
+    margin-bottom: 1rem;
+    width: 100%;
+    &:focus {
+      outline: $red;
+    }
+  }
+  textarea {
+    @extend input;
+  }
+}
+.contact p {
+  margin: auto;
+}

@@ -1,0 +1,165 @@
+@media (min-width: 700px) {
+  .btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: $red solid 1px;
+    transition: 1s;
+    cursor: pointer;
+    &:hover {
+      background-color: $red;
+    }
+  }
+
+  .logo1 {
+    margin-left: initial;
+  }
+  #humIcon {
+    display: none;
+  }
+
+  nav {
+    width: 50%;
+    height: auto;
+  }
+
+  .menu {
+    position: initial;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: initial;
+    border: initial;
+    position: initial;
+    margin-top: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    border-radius: initial;
+    background-color: initial;
+    z-index: initial;
+    padding: initial;
+
+    & a {
+      color: white;
+    }
+    & li:not(:last-child) {
+      margin-bottom: initial;
+    }
+    li:last-child {
+      // padding: 0.5rem 1.5rem;
+      justify-self: center;
+      & a {
+        color: white;
+      }
+    }
+
+    &.display {
+      display: flex;
+    }
+  }
+
+  //   Welcome Section
+  section.welcome {
+    height: 100vh;
+    justify-content: center;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    padding-top: initial;
+    &::before {
+      background: url("../images/bgPc.jpg");
+      // background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    h1 {
+      font-size: 5rem;
+      color: white;
+      font-weight: 600;
+      width: auto;
+    }
+    p {
+      font-size: 2em;
+    }
+  }
+
+  //   Responsive
+
+  .responsive.flex.cl.al-i {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 5rem;
+    h2 {
+      width: 60%;
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+  }
+
+  span {
+    color: $red;
+  }
+
+  .resImg {
+    width: 40%;
+  }
+
+  //   Portfolio
+
+  .Projectinfo {
+    margin-top: initial;
+  }
+
+  .portfolioGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .portfolio > h2 {
+    margin: 0 auto;
+    font-size: 3rem;
+  }
+
+  .portfolioContainer {
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+    &:hover {
+      transform: translateY(0.5rem);
+    }
+    &:hover .Projectinfo {
+      transition: 2s;
+      display: block;
+    }
+  }
+  // Languages
+  .langsContainer {
+    width: 40%;
+  }
+
+  //   skills
+  .skillsIconsContainer.flex.cl.jc-c {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  .fas.fa-info-circle {
+    border: solid 1px red;
+    display: none;
+  }
+  $marginTop: 0rem;
+  $skillsColors: (
+    "html": $marginTop,
+    "css": $marginTop + 2rem,
+    "scss": $marginTop + 4rem,
+    "js": $marginTop + 6rem,
+    "react": $marginTop + 8rem,
+    "bootsrap": $marginTop + 10rem,
+  );
+
+  @each $name, $margin in $skillsColors {
+    .skillsIcon-#{$name} {
+      margin-top: $margin;
+    }
+  }
+}

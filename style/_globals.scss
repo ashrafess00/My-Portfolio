@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Nunito:wght@300;400;700&family=Open+Sans&family=Orbitron:wght@400;500&family=PT+Sans:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 2rem;
+  background-color: $dark-blue;
+  color: white;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited {
+    color: initial;
+  }
+}
+
+.flex {
+  display: flex;
+  &.cl {
+    flex-direction: column;
+  }
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.jc-c {
+    justify-content: center;
+  }
+  &.al-i {
+    align-items: center;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: $red;
+  border-radius: $radius;
+  border: none;
+  color: white;
+}
+
+a {
+  display: block;
+  position: relative;
+}
+.menu a {
+  display: block;
+  position: relative;
+
+  &::after {
+    transition: 1s;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    height: 4px;
+    width: 0%;
+    left: -50%;
+    right: -50%;
+    margin: auto;
+    animation: navAnimHide 0.5s forwards;
+  }
+  &:hover::after {
+    animation: navAnimShow 0.5s forwards;
+  }
+}
+
+@keyframes navAnimShow {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes navAnimHide {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+:root {
+  --arabicAnim: "";
+  --englishAnim: "";
+  --frenchAnim: "";
+}

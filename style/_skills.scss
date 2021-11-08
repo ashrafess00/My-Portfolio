@@ -1,0 +1,24 @@
+.skillsIconsContainer div {
+  margin-bottom: 1rem;
+}
+
+$skillsColors: (
+  "html": #e54d26,
+  "css": #0b73ba,
+  "scss": #cf649a,
+  "js": #d9b82d,
+  "react": #7de0ff,
+  "bootsrap": #8512f3,
+);
+
+@each $name, $colors in $skillsColors {
+  .skillsIcon-#{$name} {
+    font-size: 7rem;
+    color: $colors;
+    transition: 1s;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(15px);
+    }
+  }
+}

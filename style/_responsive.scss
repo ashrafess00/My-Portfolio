@@ -1,0 +1,19 @@
+span {
+  color: $red;
+}
+
+.resImg {
+  width: 80%;
+}
+h2 {
+  &::before {
+    content: "<";
+    color: white;
+    margin-right: 1rem;
+  }
+  &::after {
+    content: "/>";
+    color: $red;
+    margin-left: 1rem;
+  }
+}
