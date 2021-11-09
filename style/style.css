@@ -300,6 +300,7 @@ h2::after {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .portfolioGrid img {
@@ -316,14 +317,13 @@ h2::after {
      border-image: linear-gradient(45deg, red, #1900ff) 1;
   border-width: 4px;
   border-style: solid;
-  height: 40vh;
+  height: 100%;
   position: absolute;
   top: 0;
   cursor: pointer;
   background-color: #000000e3;
-  width: auto;
+  width: 100%;
   text-align: justify;
-  margin-top: 2rem;
   padding: 0.6rem;
   -webkit-transition: 1s;
   transition: 1s;
@@ -331,7 +331,7 @@ h2::after {
 }
 
 .seeMore {
-  margin: auto;
+  margin: 1rem auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -345,7 +345,8 @@ h2::after {
 
 .fa-info-circle {
   cursor: pointer;
-  display: bl;
+  display: block;
+  font-size: 1.5rem;
 }
 
 .infoBtn a {
@@ -587,7 +588,7 @@ footer {
   font-size: 0.6rem;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   header nav ul.menu.flex {
     width: 60%;
   }
@@ -602,9 +603,19 @@ footer {
   .portfolioGrid img {
     height: 30vh;
   }
+  .Projectinfo {
+    overflow-y: auto;
+    font-size: 0.6em;
+  }
+  .skillsIconsContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .btn {
     padding: 0.5rem 1rem;
     background-color: transparent;
@@ -709,7 +720,7 @@ footer {
     width: 40%;
   }
   .Projectinfo {
-    margin-top: initial;
+    font-size: 1em;
   }
   .portfolioGrid {
     -ms-grid-columns: (1fr)[3];
@@ -739,6 +750,9 @@ footer {
     width: 40%;
   }
   .skillsIconsContainer.flex.cl.jc-c {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -797,6 +811,15 @@ footer {
   }
   .footerIcons a i:hover {
     color: red;
+  }
+}
+
+@media print {
+  body {
+    background-color: black;
+  }
+  body h1 {
+    color: black;
   }
 }
 /*# sourceMappingURL=style.css.map */

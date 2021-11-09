@@ -1,4 +1,4 @@
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   // nav
   header {
     nav ul.menu.flex {
@@ -21,9 +21,18 @@
       height: 30vh;
     }
   }
+  .Projectinfo {
+    overflow-y: auto;
+    font-size: 0.6em;
+  }
+
+  .skillsIconsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .btn {
     padding: 0.5rem 1rem;
     background-color: transparent;
@@ -125,7 +134,7 @@
   //   Portfolio
 
   .Projectinfo {
-    margin-top: initial;
+    font-size: 1em;
   }
 
   .portfolioGrid {
@@ -156,6 +165,7 @@
 
   //   skills
   .skillsIconsContainer.flex.cl.jc-c {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 3rem;
@@ -208,6 +218,15 @@
       &:hover {
         color: $red;
       }
+    }
+  }
+}
+
+@media print {
+  body {
+    background-color: black;
+    h1 {
+      color: black;
     }
   }
 }

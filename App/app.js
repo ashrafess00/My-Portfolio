@@ -6,22 +6,33 @@ let projectInfo = document.querySelector(".Projectinfo")
 let infoIcons = [...document.querySelectorAll(".fa-info-circle")]
 
 
-infoIcons.forEach(e => {
-    console.log(getComputedStyle(e).display)
-    if(getComputedStyle(e).display !== "none"){
-        e.parentElement.addEventListener("click" , ()=>{
-            console.log(e)
-            if(getComputedStyle(e.nextElementSibling).display === "none"){
-                e.nextElementSibling.style.display = "block"
-                console.log("jj")
+infoIcons.forEach(infoIcon => {
+    
+        // console.log(e.nextElementSibling.firstElementChild)
+        console.log(infoIcon)
+        // e.parentElement.addEventListener("click" , ()=>{
+        //     console.log(e)
+        //     if(getComputedStyle(e.nextElementSibling).display === "none"){
+        //         e.nextElementSibling.style.display = "block"
+        //     }
+        //     else{
+        //         e.nextElementSibling.style.display = "none"
+        //     }
+        // })
+        infoIcon.addEventListener("click" , ()=>{
+            console.log(infoIcon.nextElementSibling.firstElementChild)
+            if(getComputedStyle(infoIcon.nextElementSibling.firstElementChild).display === "none"){
+                console.log(infoIcon.nextElementSibling.firstElementChild)
+                infoIcon.nextElementSibling.firstElementChild.style.display = "block"
             }
             else{
-                e.nextElementSibling.style.display = "none"
+                console.log("auto")
+                infoIcon.nextElementSibling.firstElementChild.style.display = "none"
             }
         })
     }
     
-})
+)
 document.querySelectorAll(".fa-info-circle")
 
 humIcon.addEventListener("click" , ()=>{

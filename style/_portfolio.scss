@@ -5,6 +5,7 @@
 .portfolioGrid {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 2rem;
   img {
     height: 40vh;
   }
@@ -18,21 +19,20 @@
   border-image: linear-gradient(45deg, red, rgb(25, 0, 255)) 1;
   border-width: 4px;
   border-style: solid;
-  height: 40vh;
+  height: 100%;
   position: absolute;
   top: 0;
   cursor: pointer;
   background-color: $info_bg;
-  width: auto;
+  width: 100%;
   text-align: justify;
-  margin-top: 2rem;
   padding: 0.6rem;
   transition: 1s;
   font-size: 0.8em;
 }
 
 .seeMore {
-  margin: auto;
+  margin: 1rem auto;
   align-self: center;
   color: white;
   display: block;
@@ -43,7 +43,8 @@
 
 .fa-info-circle {
   cursor: pointer;
-  display: bl;
+  display: block;
+  font-size: 1.5rem;
 }
 
 .infoBtn a {
