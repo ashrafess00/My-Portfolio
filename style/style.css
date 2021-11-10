@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   line-height: 2rem;
