@@ -790,7 +790,7 @@ footer {
     margin-top: 10rem;
   }
   .contactForm {
-    width: 60%;
+    width: 50%;
   }
   .contactForm input[type="text"], .contactForm textarea[type="text"] {
     display: inline-block;

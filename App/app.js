@@ -8,17 +8,8 @@ let infoIcons = [...document.querySelectorAll(".fa-info-circle")]
 
 infoIcons.forEach(infoIcon => {
     
-        // console.log(e.nextElementSibling.firstElementChild)
+        
         console.log(infoIcon)
-        // e.parentElement.addEventListener("click" , ()=>{
-        //     console.log(e)
-        //     if(getComputedStyle(e.nextElementSibling).display === "none"){
-        //         e.nextElementSibling.style.display = "block"
-        //     }
-        //     else{
-        //         e.nextElementSibling.style.display = "none"
-        //     }
-        // })
         infoIcon.addEventListener("click" , ()=>{
             console.log(infoIcon.nextElementSibling.firstElementChild)
             if(getComputedStyle(infoIcon.nextElementSibling.firstElementChild).display === "none"){
@@ -70,3 +61,14 @@ whatsappBtn.addEventListener("click" , (e)=>{
     console.log(message.value)
 })
 
+
+let contactBtn = document.getElementById("contactBtn")
+let contactMe = document.getElementById("contactMe")
+
+contactBtn.onclick = ()=>{
+    window.scrollTo({
+        top:contactMe.offsetTop ,
+        left:0,
+        behavior:"smooth",
+    })
+}
