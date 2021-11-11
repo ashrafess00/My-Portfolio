@@ -62,6 +62,8 @@ whatsappBtn.addEventListener("click" , (e)=>{
 })
 
 
+// scroll to contact 
+
 let contactBtn = document.getElementById("contactBtn")
 let contactMe = document.getElementById("contactMe")
 
