@@ -9,9 +9,19 @@
     <script src="https://kit.fontawesome.com/cc881b3a23.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-
-  <div id="navBar"></div>
+  
+  <!-- navbar  -->
+  <header class="flex jc-sb" id="navBar">
+    <a href="/"><img src="./images/myLogo.svg" class="logo1" alt=""></a>
+    <nav>
+      <ul class="menu flex display" id="menu">
+        <li><a href="./Projects.html" target="_blank">Portfolio</a></li>
+        <li><a href="">About Me</a></li>
+        <li><a href="./docs/Ash-CV.pdf">Download My Cv</a></li>
+      </ul>
+      <i class="fas fa-bars " id="humIcon"></i>
+    </nav>
+  </header>
 
     <section class="portfolio">
         <h2>Port<span>folio</span></h2>
@@ -101,8 +111,7 @@
   
         
       </section>
-      <!-- <script src="./App/app.js"></script> -->
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="./App/app.js"></script>
   <script>
     $(function(){
       $("#navBar").load("./navBar.html");
