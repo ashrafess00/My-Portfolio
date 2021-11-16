@@ -14,12 +14,10 @@
   }
 
   //portfolio
+
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    img {
-      height: 30vh;
-    }
   }
   .Projectinfo {
     overflow-y: auto;
@@ -133,6 +131,9 @@
 
   //   Portfolio
 
+  .portfolio h4 {
+    display: none;
+  }
   .Projectinfo {
     font-size: 1em;
   }

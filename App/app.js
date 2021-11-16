@@ -2,29 +2,16 @@ let humOpened = false
 let humIcon = document.getElementById("humIcon")
 let menu = document.getElementById("menu")
 let projectInfo = document.querySelector(".Projectinfo")
-// let infoBtn = document.querySelector(".fa-info-circle")
-let infoIcons = [...document.querySelectorAll(".fa-info-circle")]
 
+// Projects 
+const portfolioContainer = document.querySelectorAll(".portfolioContainer")
+portfolioContainer.forEach(pc => {
+    pc.addEventListener("click" , ()=>{
+        console.log(pc.firstElementChild)
+        pc.firstElementChild.classList.toggle("show")
+    })
+})
 
-infoIcons.forEach(infoIcon => {
-    
-        
-        console.log(infoIcon)
-        infoIcon.addEventListener("click" , ()=>{
-            console.log(infoIcon.nextElementSibling.firstElementChild)
-            if(getComputedStyle(infoIcon.nextElementSibling.firstElementChild).display === "none"){
-                console.log(infoIcon.nextElementSibling.firstElementChild)
-                infoIcon.nextElementSibling.firstElementChild.style.display = "block"
-            }
-            else{
-                console.log("auto")
-                infoIcon.nextElementSibling.firstElementChild.style.display = "none"
-            }
-        })
-    }
-    
-)
-document.querySelectorAll(".fa-info-circle")
 
 humIcon.addEventListener("click" , ()=>{
     menu.classList.toggle("display")
@@ -52,6 +39,9 @@ window.addEventListener("scroll" , ()=>{
        document.documentElement.style.setProperty("--frenchAnim" , "french 1s forwards")
     }
     })
+
+
+
 
 let whatsappBtn = document.getElementById("sendToWhatsapp")
 

@@ -1,13 +1,17 @@
 .portfolio {
   padding: 2rem;
   position: relative;
+  h4 {
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
 }
 .portfolioGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   img {
-    height: 40vh;
+    height: auto;
   }
 }
 
@@ -17,7 +21,7 @@
 .Projectinfo {
   display: none;
   border-image: linear-gradient(45deg, red, rgb(25, 0, 255)) 1;
-  border-width: 4px;
+  border-width: 1px;
   border-style: solid;
   height: 100%;
   position: absolute;
@@ -29,6 +33,9 @@
   padding: 0.6rem;
   transition: 1s;
   font-size: 0.8em;
+  &.show {
+    display: block;
+  }
 }
 
 .seeMore {
