@@ -150,6 +150,24 @@ a {
   --frenchAnim: "";
 }
 
+.certifications {
+  padding: 4rem;
+}
+
+.certifications div {
+  margin-bottom: 2rem;
+}
+
+.certifications a {
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  .certifications {
+    padding: 7rem;
+  }
+}
+
 header {
   padding: 1rem;
   position: relative;
