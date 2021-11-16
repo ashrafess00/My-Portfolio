@@ -94,8 +94,8 @@ a {
 }
 
 .menu a::after {
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   content: "";
   position: absolute;
   bottom: 0;
@@ -105,43 +105,14 @@ a {
   left: -50%;
   right: -50%;
   margin: auto;
-  -webkit-animation: navAnimHide 0.5s forwards;
-          animation: navAnimHide 0.5s forwards;
 }
 
 .menu a:hover::after {
-  -webkit-animation: navAnimShow 0.5s forwards;
-          animation: navAnimShow 0.5s forwards;
+  width: 100%;
 }
 
-@-webkit-keyframes navAnimShow {
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes navAnimShow {
-  100% {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes navAnimHide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes navAnimHide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
+.menu.flex.display li:last-child a:hover::after {
+  width: 0;
 }
 
 :root {

@@ -70,12 +70,13 @@ a {
   display: block;
   position: relative;
 }
+
 .menu a {
   display: block;
   position: relative;
 
   &::after {
-    transition: 1s;
+    transition: all 0.5s;
     content: "";
     position: absolute;
     bottom: 0;
@@ -85,24 +86,19 @@ a {
     left: -50%;
     right: -50%;
     margin: auto;
-    animation: navAnimHide 0.5s forwards;
   }
   &:hover::after {
-    animation: navAnimShow 0.5s forwards;
+    width: 100%;
   }
 }
 
-@keyframes navAnimShow {
-  100% {
-    width: 100%;
-  }
-}
-@keyframes navAnimHide {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
+.menu.flex.display {
+  li:last-child {
+    a {
+      &:hover::after {
+        width: 0;
+      }
+    }
   }
 }
 
