@@ -64,3 +64,4 @@ contactBtn.onclick = ()=>{
         behavior:"smooth",
     })
 }
+
